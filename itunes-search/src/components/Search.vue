@@ -11,7 +11,6 @@
                   v-model="search"
                   class="mt-0"
                   color="white"
-                  dark
                   clearable
                   :label="label"
                 ></v-text-field>
@@ -24,7 +23,7 @@
             </v-layout>
           </v-form>
           <v-flex xs12>
-            <v-radio-group v-model="entity" row dark>
+            <v-radio-group v-model="entity" row>
               <v-radio label="Album" value="album"></v-radio>
               <v-radio label="Music Track" value="musicTrack"></v-radio>
             </v-radio-group>
