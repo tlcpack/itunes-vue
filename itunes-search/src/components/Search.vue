@@ -1,36 +1,34 @@
 <template>
-  <v-container>
-    <v-flex>
+
+    <div class='v-flex'>
       <h5 class="headline text-xs-center grey--text text--lighten-3 mb-4 mt-2">iTunes Search</h5>
-      <v-card>
-        <v-card-text class="pb-0">
-          <v-form @submit.prevent="submitSearch(true)">
-            <v-layout row>
-              <v-flex xs11>
-                <v-text-field
+      <div class='v-card'>
+        <div class='v-card-text pb-0' >
+          <form @submit.prevent="submitSearch(true)" method="post">
+            <div class='v-layout' row>
+              <div class='v-flex'>
+                <input class='v-text-field'
                   v-model="search"
-                  class="mt-0"
                   color="white"
-                  clearable
                   :label="label"
-                ></v-text-field>
-              </v-flex>
-              <v-flex x1 class="mt-0">
+                />
+              </div>
+              <!-- <v-flex x1 class="mt-0">
                 <v-btn outline color="white" type="submit">
                   <v-icon>search</v-icon>
                 </v-btn>
-              </v-flex>
-            </v-layout>
-          </v-form>
-          <v-flex xs12>
+              </v-flex> -->
+            </div>
+          </form>
+          <!-- <v-flex xs12>
             <v-radio-group v-model="entity" row>
               <v-radio label="Album" value="album"></v-radio>
               <v-radio label="Music Track" value="musicTrack"></v-radio>
             </v-radio-group>
-          </v-flex>
-        </v-card-text>
+          </v-flex> -->
+        </div>
 
-        <v-card-text v-if="albums.length">
+        <!-- <v-card-text v-if="albums.length">
           <v-layout row>
             <v-flex xs12 class="text-xs-center">
               <v-btn fab outline color="white" small @click="submitSearch()">
@@ -66,10 +64,9 @@
               </v-flex>
             </div>
           </v-layout>
-        </v-card-text>
-      </v-card>
-    </v-flex>
-  </v-container>
+        </v-card-text> -->
+      </div>
+    </div>
 </template>
 
 <script>
@@ -133,7 +130,7 @@
 </script>
 
 <style scoped>
-  .album-box {
+  /* .album-box {
     position: relative;
     display: inline-block;
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
@@ -200,5 +197,5 @@
 
   .v-input--radio-group .v-radio {
        margin-bottom: 8px;
-  }
+  } */
 </style>
