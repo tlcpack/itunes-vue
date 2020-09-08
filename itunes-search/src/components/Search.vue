@@ -1,6 +1,7 @@
 <template>
   <div>
     <div class="container">
+      <h2 class="label">Search iTunes: </h2>
       <input class="text" type="text" v-model="term" @keyup.enter="exe">
       <input class="submit" type="submit" value="Search" @click="exe">
     </div>
@@ -33,6 +34,10 @@ export default {
   padding: 20px;
   background-color: #35495e;
   box-sizing: border-box;
+}
+.label {
+  color: lightcyan;
+  margin-right: 2rem;
 }
 .text {
   width: 50%;
